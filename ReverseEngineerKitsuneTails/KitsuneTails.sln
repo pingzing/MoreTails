@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35201.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "KitsuneTails", "D:\Programs\Steam\steamapps\common\KitsuneTails\KitsuneTails.exe", "{C1CF5C1C-2629-44A4-99CF-4CAD45F91B42}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = D:\Programs\Steam\steamapps\common\KitsuneTails\KitsuneTails.exe
+		RemoteMachine = BEHEMOTH
+		StartingDirectory = D:\Programs\Steam\steamapps\common\KitsuneTails
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+		IORedirection = Auto
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1CF5C1C-2629-44A4-99CF-4CAD45F91B42}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9F037BB-6F48-4756-B23D-9EAE3D8D6942}
+	EndGlobalSection
+EndGlobal

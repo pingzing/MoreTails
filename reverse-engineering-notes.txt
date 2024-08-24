@@ -1,0 +1,6 @@
+- KiSpeed is tracked in KitsuneTails.Entities.Player.cs, in the Update() method.
+- Jumping happens in KitsuneTails.Entities.Player.cs in two different OnJump() methods.
+    - This happens for realises in the base class, Entity.cs, where DoJump() is called, which *triggers* its childrens' OnJump()s.
+- Dying happens in Entity.cs's Die() method, but there are two: a plain, un-overridable on, but also a virtual one that
+    children can implement, which is where the work actually happens.
+- Level ending happens in KitsuneTails.Transitions.ToriLevelEndTransition, in the EndLevel() method.
