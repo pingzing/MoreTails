@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35201.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreTails", "KTAPI\MoreTails.csproj", "{DBD99ED2-4DF1-47D9-B1C9-1D2B09C3EC85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreTails", "MoreTails\MoreTails.csproj", "{DBD99ED2-4DF1-47D9-B1C9-1D2B09C3EC85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2AED2F37-89D9-42F1-8ABF-ADA7CD83F2D8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+		reverse-engineering-notes.txt = reverse-engineering-notes.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
