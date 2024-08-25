@@ -1,5 +1,4 @@
 ﻿using System;
-using KitsuneTails;
 
 namespace MoreTails.TestMod;
 
@@ -13,7 +12,7 @@ public class MotionWatcher : Mod
         ModApi.Events.PlayerJumped += PlayerJumped;
     }
 
-    private void PlayerJumped() => Console.WriteLine("Player jumped!");
+    private void PlayerJumped() => Console.WriteLine("MoreTails.TestMod saw that Player jumped!");
 
     private void PlayerDied() => Console.WriteLine("Player died!");
 
