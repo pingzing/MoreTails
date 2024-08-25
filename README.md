@@ -12,7 +12,7 @@ For now, it's just a proof-of-concept program that can be used to hook into Kits
 
 ### Process
 
-1) Modify the .csproj file's KitsuneTails reference node so that it points to your KitsuneTails.exe. It should look something like the below:
+1) Modify the `MoreTails/MoreTails.csproj` file's KitsuneTails reference node so that it points to your KitsuneTails.exe. It should look something like the below:
 
 ```xml
 <Reference Include="KitsuneTails">
