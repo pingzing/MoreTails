@@ -33,6 +33,10 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <!--Debug into MoreTails.exe in the KitsuneTails directory instead of trying to run from /bin-->
+    <StartAction>Program</StartAction>
+    <StartProgram>D:\Programs\Steam\steamapps\common\KitsuneTails\MoreTails.exe</StartProgram>
+    <StartWorkingDirectory>D:\Programs\Steam\steamapps\common\KitsuneTails</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -71,6 +75,7 @@
     </Reference>
     <Reference Include="KitsuneTails">
       <HintPath>D:\Programs\Steam\steamapps\common\KitsuneTails\KitsuneTails.exe</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -83,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KTWrapper.cs" />
+    <Compile Include="Mod.cs" />
+    <Compile Include="ModApi.cs" />
     <Compile Include="Patches\Events.cs" />
     <Compile Include="Patches\PatchDeath.cs" />
     <Compile Include="Patches\PatchJump.cs" />
@@ -107,6 +114,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MoreTails.ModApi\MoreTails.Interfaces.csproj">
+      <Project>{7ba9fe68-bb07-439a-87ac-62e93f3f4781}</Project>
+      <Name>MoreTails.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,21 +1,31 @@
 ﻿#nullable enable
+using System;
+using MoreTails.Interfaces;
+
 namespace MoreTails.Patches;
 
-public class Events
+public class Events : MarshalByRefObject, IEvents
 {
-    public delegate void BasicEventHandler();
-    public delegate void BasicEventHandler<T>(T arg);
+    public event BasicEventHandler? PlayerDied;
+    public event BasicEventHandler<double>? KiSpeedChanged;
+    public event BasicEventHandler? PlayerJumped;
+    public event BasicEventHandler? LevelEnded;
 
-    public static event BasicEventHandler? PlayerDied;
-    public static event BasicEventHandler<double>? KiSpeedChanged;
-    public static event BasicEventHandler? PlayerJumped;
-    public static event BasicEventHandler? LevelEnded;
+    public static Events Singleton;
 
-    internal static void OnPlayerDied() => PlayerDied?.Invoke();
+    private Events() { }
 
-    internal static void OnKiSpeedChanged(double kiSpeed) => KiSpeedChanged?.Invoke(kiSpeed);
+    static Events()
+    {
+        Singleton = new Events();
+    }
 
-    internal static void OnPlayerJumped() => PlayerJumped?.Invoke();
+    internal static void OnPlayerDied() => Singleton.PlayerDied?.Invoke();
 
-    internal static void OnLevelEnded() => LevelEnded?.Invoke();
+    internal static void OnKiSpeedChanged(double kiSpeed) =>
+        Singleton.KiSpeedChanged?.Invoke(kiSpeed);
+
+    internal static void OnPlayerJumped() => Singleton.PlayerJumped?.Invoke();
+
+    internal static void OnLevelEnded() => Singleton.LevelEnded?.Invoke();
 }
